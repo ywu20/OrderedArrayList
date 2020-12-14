@@ -16,10 +16,12 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       }
       else{
         int s=this.size();
-        for(int i=1;i<s;i++){
+        boolean isAdded=false;
+        for(int i=1;i<s&&!isAdded;i++){
           if(e.compareTo(this.get(i-1))>=0 && e.compareTo(this.get(i))<=0){
             super.add(i,e);
             System.out.println("somewhere between");
+            isAdded=true;
           }
         }
       }
@@ -28,5 +30,9 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       System.out.println("add to end");
     }
     return true;
+}
+
+public void add(int index, T e){
+  this.add(e);
 }
 }
