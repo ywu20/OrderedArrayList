@@ -9,7 +9,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public boolean add(T e){
-    if(this.size()>0 && e.compareTo(this.get(this.size()-1))<0){
+    if(e!=null&&this.size()>0 && e.compareTo(this.get(this.size()-1))<0){
       if(e.compareTo(this.get(0))<=0){
         super.add(0,e);
       }
@@ -32,4 +32,17 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
 public void add(int index, T e){
   this.add(e);
 }
+
+public T set(int index, T e){
+  if(e==null){
+    return super.set(index,e);
+  }
+  else{
+    T out=this.get(index);
+    this.remove(index);
+    this.add(e);
+    return out;
+  }
+}
+
 }
