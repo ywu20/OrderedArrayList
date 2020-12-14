@@ -15,7 +15,8 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
         System.out.println("less than first");
       }
       else{
-        for(int i=1;i<this.size();i++){
+        int s=this.size();
+        for(int i=1;i<s;i++){
           if(e.compareTo(this.get(i-1))>=0 && e.compareTo(this.get(i))<=0){
             super.add(i,e);
             System.out.println("somewhere between");
