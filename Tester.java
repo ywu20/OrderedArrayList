@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 public class Tester{
   public static void main(String[] args){
+
+    /* NoNullArrayList Tests
     NoNullArrayList<String> a= new NoNullArrayList<String>();
     a.add("djahguhg");
     System.out.println(a.get(0));
@@ -29,6 +31,10 @@ try{
 }catch(IllegalArgumentException e) {
   System.out.println("set null catched");
 }
+*/
+
+OrderedArrayList<Integer> c = new OrderedArrayList<Integer>();
+OrderedArrayList<String> d= new OrderedArrayList<String>(100);
 
 
   }
