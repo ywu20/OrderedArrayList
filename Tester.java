@@ -20,6 +20,16 @@ catch(IllegalArgumentException e){
   System.out.println("add to index exception catched");
 }
 
+NoNullArrayList<Integer> b=new NoNullArrayList<Integer>(2);
+
+a.set(0,"hella");
+System.out.println(a.get(0));
+try{
+  a.set(a.size()-1, null);
+}catch(IllegalArgumentException e) {
+  System.out.println("set null catched");
+}
+
 
   }
 }
