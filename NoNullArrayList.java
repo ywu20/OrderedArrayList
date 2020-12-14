@@ -17,4 +17,13 @@ public class NoNullArrayList<T>  extends ArrayList<T>{
     }
     return true;
   }
+
+  public void add(int index, T e){
+    if(e==null){
+      throw new IllegalArgumentException();
+    }
+    else{
+      super.add(index,e);
+    }
+  }
 }
