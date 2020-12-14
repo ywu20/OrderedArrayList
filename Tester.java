@@ -32,7 +32,7 @@ try{
   System.out.println("set null catched");
 }
 */
-
+/*
 OrderedArrayList<Integer> c = new OrderedArrayList<Integer>();
 OrderedArrayList<String> d= new OrderedArrayList<String>(100);
 c.add(43); c.add(-565); c.add(0); c.add(3);c.add(43);c.add(0,45); c.add(3,-45);
@@ -40,7 +40,7 @@ c.add(43); c.add(-565); c.add(0); c.add(3);c.add(43);c.add(0,45); c.add(3,-45);
 for(int i=0;i<c.size();i++){
   System.out.print(c.get(i)+" ");
 }
-
+*/
 
   }
 }
